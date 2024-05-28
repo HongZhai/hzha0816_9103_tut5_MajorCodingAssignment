@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(800, 800);
-  frameRate(30); // 设置帧率为30
+  frameRate(30); 
 }
 
 function draw() {
@@ -232,4 +232,7 @@ function drawCenterCircles(x, y, centerCircleColors, centerCircleSizes) {
     noStroke();
     ellipse(x, y, centerCircleSizes[i]);
   }
+}
+function easing(t) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
